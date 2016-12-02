@@ -1,5 +1,5 @@
 {
-  "name": "story-builder",
+  "name": "hooked-with-an-edge-web",
   "version": "1.0.0",
   "description": "",
   "main": "gulpfile.js",
@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/chrisharrington/story-builder.git"
+    "url": "https://github.com/chrisharrington/hooked-with-an-edge-web.git"
   },
   "author": "Chris Harrington",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/chrisharrington/story-builder/issues"
+    "url": "https://github.com/chrisharrington/hooked-with-an-edge-web/issues"
   },
-  "homepage": "https://github.com/chrisharrington/story-builder",
+  "homepage": "https://github.com/chrisharrington/hooked-with-an-edge-web",
   "devDependencies": {
     "babel-core": "^6.10.4",
     "babel-loader": "^6.2.4",
