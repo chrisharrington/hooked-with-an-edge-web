@@ -1,22 +1,22 @@
-"use strict";
+'use strict';
 
-import React from "react";
-import ReactDOM from "react-dom";
+import React from 'react';
+import ReactDOM from 'react-dom';
 
-import "file?name=index.html!./index.html";
+import 'file?name=index.html!./index.html';
+import 'file?name=favicon.ico!./assets/favicon.ico';
 
-import "./assets/grid.min.css";
+import './assets/grid.min.css';
+
+import './style.scss';
+
+import Landing from './pages/landing/index.jsx';
+
 
 class HelloWorld extends React.Component {
 	render() {
-		return <div className='container'>
-			<div className='row'>
-				<div className='col-md-12'>
-					Hello, world!
-				</div>
-			</div>
-		</div>;
+		return <Landing />;
 	};
 };
 
-ReactDOM.render(<HelloWorld />, document.querySelector("#container"));
+ReactDOM.render(<HelloWorld />, document.querySelector('#container'));

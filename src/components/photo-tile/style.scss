@@ -1,0 +1,73 @@
+.photo-tile {
+	width: 100%;
+	min-height: 500px;
+	border-radius: 3px;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+	position: relative;
+	background-color: white;
+	position: relative;
+
+	.image {
+		width: 100%;
+		height: 250px;
+		border-top-left-radius: 3px;
+		border-top-right-radius: 3px;
+		background-position: center center;
+		background-size: cover;
+	}
+
+	h2 {
+		float: left;
+		padding: 15px 15px 0 15px;
+	}
+
+	.profile-picture {
+		float: right;
+		margin-right: 15px;
+		margin-top: 15px;
+		width: 34px;
+		height: 34px;
+		border-radius: 50%;
+	}
+
+	i {
+		float: right;
+		margin-top:8px;
+		color: #AAA;
+		padding: 15px;
+		cursor: pointer;
+		font-size: 18px;
+		transition: color 150ms linear;
+
+		&:hover {
+			color: black;
+		}
+	}
+
+	.blurb {
+		$backgroundColour: #E5E5E5;
+
+		margin-top: -8px;
+		width: 100%;
+		padding: 15px;
+		box-sizing: border-box;
+		position: relative;
+
+		.inner {
+			width: 100%;
+			border-radius: 10px;
+			background-color: $backgroundColour;
+			padding: 15px;
+		}
+
+		.arrow {
+			width: 0;
+			height: 0;
+			border: solid 10px transparent;
+			border-bottom-color: $backgroundColour;
+			position:absolute;
+			top: -5px;
+			right: 22px;
+		}
+	}
+}
