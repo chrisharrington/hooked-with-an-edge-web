@@ -16,22 +16,18 @@
 		background-size: cover;
 	}
 
-	h2 {
+	h4 {
 		float: left;
 		padding: 15px 15px 0 15px;
 	}
 
-	.profile-picture {
+	.owner-image {
 		float: right;
 		margin-right: 15px;
 		margin-top: 15px;
-		width: 34px;
-		height: 34px;
-		border-radius: 50%;
 	}
 
 	i {
-		float: right;
 		margin-top:8px;
 		color: #AAA;
 		padding: 15px;
@@ -42,32 +38,22 @@
 		&:hover {
 			color: black;
 		}
+
+		&.fa-envelope-o {
+			float: right;
+		}
 	}
 
-	.blurb {
-		$backgroundColour: #E5E5E5;
-
-		margin-top: -8px;
+	.blurb, .more {
+		float: left;
 		width: 100%;
-		padding: 15px;
 		box-sizing: border-box;
 		position: relative;
+		padding: 15px;
+		color: #777;
+	}
 
-		.inner {
-			width: 100%;
-			border-radius: 10px;
-			background-color: $backgroundColour;
-			padding: 15px;
-		}
-
-		.arrow {
-			width: 0;
-			height: 0;
-			border: solid 10px transparent;
-			border-bottom-color: $backgroundColour;
-			position:absolute;
-			top: -5px;
-			right: 22px;
-		}
+	.more {
+		padding:0;
 	}
 }

@@ -1,0 +1,56 @@
+.modal {
+
+	&.visible {
+		visibility: visible;
+		opacity: 1;
+		transition: opacity 350ms ease;
+	}
+
+	&.hidden {
+		visibility: hidden;
+		opacity: 0;
+		transition: visibility 0s 350ms, opacity 350ms ease;
+	}
+
+	.modal-focus {
+		background: white;
+		opacity: 0.6;
+		position: fixed;
+		z-index: 2;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+	}
+
+	.modal-content {
+		background: white;
+		position: fixed;
+		z-index: 3;
+		min-width: 400px;
+		max-width: 1000px;
+		border-radius: 3px;
+		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+		padding: 15px;
+		box-sizing: border-box;
+		top: 150px;
+		left: 50%;
+		transform: translateX(-50%);
+
+		.close {
+			position: fixed;
+			top: 0;
+			right: 0;
+			padding: 15px;
+			cursor: pointer;
+			color: #777;
+			transition: color 150ms linear;
+			font-style: normal;
+
+			&:hover {
+				color: black;
+			}
+		}
+	}
+
+}

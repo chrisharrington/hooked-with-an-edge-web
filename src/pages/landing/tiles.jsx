@@ -26,7 +26,7 @@ export default class Tiles extends React.Component {
 				return <div className='row' key={i}>
 					{group.map((item, i) => {
 						return <div className={'col-md-' + (12 / COLUMN_COUNT)} key={i}>
-							<PhotoTile item={item} />
+							<PhotoTile item={item} onInfoRequested={this.props.onInfoRequested} />
 						</div>;
 					})}
 				</div>;
