@@ -3,6 +3,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import Spinner from 'components/spinner';
+
+import './style.scss';
+
 export class Input extends React.Component {
 	constructor() {
 		super();
@@ -13,11 +17,15 @@ export class Input extends React.Component {
 	};
 
 	render() {
-		var props = this.props;
-		props.type = props.type || 'text';
-		return <div className='form-input'>
-			<input {...props} onFocus={this.onFocus.bind(this, true)} onBlur={this.onFocus.bind(this, false)} />
-			<div className='focus' />			
+		var props = Object.assign({
+			type: 'text',
+			onFocus: this.onFocus.bind(this, true),
+			onBlur: this.onFocus.bind(this, false),
+			className: 'field'
+		}, this.props);
+		return <div className={'form-input' + (this.state.focus ? ' focus' : '')}>
+			{this.props.multiple ? <textarea {...props}></textarea> : <input {...props} />}
+			<div className='focus-bar' />			
 		</div>;
 	};
 
@@ -27,3 +35,19 @@ export class Input extends React.Component {
 		});
 	};
 };
+
+export class Button extends React.Component {
+	render() {
+		return <button type='button' onClick={this.props.onClick} disabled={this.props.loading || this.props.success} className={`${this.props.className || ''} ${this.props.loading ? ' loading' : ''} ${this.props.success ? ' success' : ''}`}>
+			<div className='loading-inner'>
+				<Spinner />
+			</div>
+			<div className='success-inner'>
+				<i className='fa fa-check' />
+			</div>
+			<div className='content'>
+				{this.props.children}
+			</div>
+		</button>
+	}
+}

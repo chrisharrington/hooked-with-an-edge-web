@@ -22,7 +22,7 @@ module.exports = {
             { test: /\.(jpe?g|png|gif|svg)$/i, loaders: ['file?name=/images/[hash].[ext]']},
             { test: /\.htc$/i, loader: "file?name=assets/[hash].[ext]" },
             { test: /\.css$/i, loader: "style!css" },
-            { test: /\.(js|jsx)$/i, loader: "babel-loader", query: { presets: ["es2015", "react"] }},
+            { test: /\.(js|jsx)$/i, loader: "babel-loader", exclude: /node_modules/, query: { presets: ["es2015", "react"] }},
             { test: /\.scss$/, loader: ExtractTextPlugin.extract("style-loader", "css-loader!sass-loader") }
         ]
     },

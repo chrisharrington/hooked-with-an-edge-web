@@ -1,0 +1,34 @@
+.speech {
+	$background: #1874bf;
+	$profilePictureWidth: 50px;
+
+	position: relative;
+
+	.profile-picture {
+		float: left;
+		width: 50px;
+	}
+
+	.arrow {
+		position: absolute;
+		z-index: 3;
+		left: 34px;
+		top: 9px;
+		width: 0;
+		height: 0;
+		border: solid 8px transparent;
+		border-right-color: $background;
+	}
+
+	.message {
+		float: left;
+		width: calc(100% - 50px);
+		background-color: $background;
+		border-radius: 5px;
+		padding: 10px;
+		font-style: italic;
+		color: #FFF;
+		font-size: 0.875rem;
+		box-shadow: 2px 2px 8px #AAA;
+	}
+}
