@@ -8,6 +8,8 @@ import { FlipTile, Front, Back } from 'components/flip-tile';
 import Speech from 'components/speech';
 import { Input, Button } from 'components/form';
 
+import Config from 'config.json';
+
 import './style.scss';
 
 export default class PhotoTile extends React.Component {
@@ -30,7 +32,7 @@ export default class PhotoTile extends React.Component {
 		let item = this.props.item;
 		return <FlipTile className='photo-tile' flipped={this.state.flipped}>
 			<Front>
-				<div className='image' style={{ backgroundImage: `url(${item.photo})` }} />
+				<div className='image' style={{ backgroundImage: `url(${this.buildPhotoUrl(item.photo)})` }} />
 				<h4>{item.title}</h4>
 				<ProfilePicture className='owner-image' />
 				<i className='fa fa-envelope-o' onClick={this.onFlip.bind(this, item)} />
@@ -49,6 +51,12 @@ export default class PhotoTile extends React.Component {
 				</form>
 			</Back>
 		</FlipTile>;
+	};
+
+	buildPhotoUrl(photo) {
+		var location = Config.api + Config.photos + photo + '-1.jpg';
+		console.log(location);
+		return location;
 	};
 
 	onFlip(item) {
